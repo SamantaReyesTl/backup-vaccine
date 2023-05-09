@@ -1,4 +1,4 @@
-package com.example;
+package com.vaccine;
 
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
