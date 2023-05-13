@@ -1,6 +1,7 @@
 package com.vaccine.controller;
 
 import com.vaccine.model.RegistroVacunaModel;
+import com.vaccine.service.RegistroVacunaService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,28 +31,28 @@ public class RegistroVacunaController { // TODO: CREA ESTOS OBJETOS
 
     @GetMapping("/consultarRegistroVacuna")
     public ResponseEntity<String> consultarRegistroVacuna(@RequestParam("id") Integer id) {
-        VacunaService vacunaService = new VacunaService();
+        RegistroVacunaService vacunaService = new RegistroVacunaService();
         RegistroVacunaModel registroVacunaModel = vacunaService.consultarRegistroVacuna(id);
         return ResponseEntity.ok().body(registroVacunaModel);
     }
 
     @PostMapping("/altaRegistroVacuna")
     public ResponseEntity<String> altaRegistroVacuna(@RequestBody RegistroVacunaModel registroVacunaModel) {
-        VacunaService vacunaService = new VacunaService();
+        RegistroVacunaService vacunaService = new RegistroVacunaService();
         vacunaService.altaRegistroVacuna(registroVacunaModel);
         return ResponseEntity.ok().body("Alta de registro de vacuna");
     }
 
     @PutMapping("/actualizarRegistroVacuna")
     public ResponseEntity<String> actualizarRegistroVacuna(@RequestParam("id") Integer id, @RequestBody RegistroVacunaModel registroVacunaModel) {
-        VacunaService vacunaService = new VacunaService();
+        RegistroVacunaService vacunaService = new RegistroVacunaService();
         vacunaService.actualizarRegistroVacuna(id, registroVacunaModel);
         return ResponseEntity.ok().body("Actualizar registro de vacuna");
     }
 
     @DeleteMapping("/bajaRegistroVacuna")
     public ResponseEntity<String> bajaRegistroVacuna(@RequestParam("id") Integer id) {
-        VacunaService vacunaService = new VacunaService();
+        RegistroVacunaService vacunaService = new RegistroVacunaService();
         vacunaService.bajaRegistroVacuna(id);
         return ResponseEntity.ok().body("Baja de registro de vacuna");
     }

@@ -15,7 +15,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class VacunaModel {
+public class VacunasModel {
     private Integer id;
     private String folio;
     private String edadVacunacion;

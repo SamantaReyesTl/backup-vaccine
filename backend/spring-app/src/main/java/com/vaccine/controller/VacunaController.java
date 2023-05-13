@@ -1,6 +1,6 @@
 package com.vaccine.controller;
 
-import com.vaccine.model.VacunaModel;
+import com.vaccine.model.VacunasModel;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -18,12 +18,12 @@ public class VacunaController {
     }
 
     @PostMapping("/altaVacuna")
-    public String altaVacuna(@RequestBody VacunaModel vacunaModel) {
+    public String altaVacuna(@RequestBody VacunasModel vacunaModel) {
         return "Alta de vacuna";
     }
 
     @PutMapping("/actualizarVacuna")
-    public String actualizarVacuna(@RequestParam("nombre_vacuna") String nombreVacuna, @RequestBody VacunaModel vacunaModel) {
+    public String actualizarVacuna(@RequestParam("nombre_vacuna") String nombreVacuna, @RequestBody VacunasModel vacunaModel) {
         return "Actualizar vacuna";
     }
 

@@ -15,9 +15,12 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class PersonaModel {
+public class PersonasModel {
     private Integer id;
-    private String CURP;
+    private String curp;
+    private Integer datosClinicosId;
+    private String datosClinicosMatricula;
+    private Integer registroVacunaId;
     private String nombre;
     private String apellidoPaterno;
     private String apellidoMaterno;
@@ -29,7 +32,5 @@ public class PersonaModel {
     private String codigoPostal;
     private String entidadFederativa;
     private String lugarNacimiento;
-    private Integer datosClinicosId;
-    private String datosClinicosMatricula;
     private DatosClinicosModel datosClinicosModel;
 }

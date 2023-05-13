@@ -23,11 +23,13 @@ public class RegistroVacunaModel {
      */
 
     private Integer id;
+    private Integer personasId;
+    private Integer vacunasId;
     private String region;
-    private String fechaVacunacion; // fecha de vacunacion
+    private String fechaVacuna; // fecha de vacunacion
     private String laboratorio;
     private String lote;
     private String dosis;
-    private PersonaModel personaModel;
-    private VacunaModel vacunaModel;
+    private PersonasModel personaModel;
+    private VacunasModel vacunaModel;
 }

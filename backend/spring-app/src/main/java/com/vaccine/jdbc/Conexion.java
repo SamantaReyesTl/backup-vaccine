@@ -11,8 +11,8 @@ import java.sql.SQLException;
 
 public class Conexion {
     private static final String URL = "jdbc:mysql://localhost:3306/vaccine?useSSL=false&serverTimezone=UTC";
-    private static final String USER = "vaccine"; // cambia esta cosa por tu usuario de mysql
-    private static final String PASSWORD = "vaccine"; // cambia esto por tu contraseña de mysql
+    private static final String USER = "root"; // cambia esta cosa por tu usuario de mysql
+    private static final String PASSWORD = "root"; // cambia esto por tu contraseña de mysql
     private static final String DRIVER = "com.mysql.jdbc.Driver";
     private Connection connection;
 
