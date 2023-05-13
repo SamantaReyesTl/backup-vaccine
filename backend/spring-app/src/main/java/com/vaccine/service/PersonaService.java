@@ -10,6 +10,10 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Aqui comienza lo complicado, aqui se hace la logica de la aplicacion.
+ */
+
 public class PersonaService {
     public PersonaModel consultarPersona(String curp) {
         Conexion conexion = new Conexion();

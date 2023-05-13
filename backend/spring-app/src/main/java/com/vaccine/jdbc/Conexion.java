@@ -4,10 +4,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * Aqui se crea la conexion a la base de datos, simplemente se crea un objeto con el cual a partir de el
+ * podemos hacer queries a la base de datos.
+ */
+
 public class Conexion {
     private static final String URL = "jdbc:mysql://localhost:3306/vaccine?useSSL=false&serverTimezone=UTC";
-    private static final String USER = "vaccine";
-    private static final String PASSWORD = "vaccine";
+    private static final String USER = "vaccine"; // cambia esta cosa por tu usuario de mysql
+    private static final String PASSWORD = "vaccine"; // cambia esto por tu contraseña de mysql
     private static final String DRIVER = "com.mysql.jdbc.Driver";
     private Connection connection;
 

@@ -3,6 +3,10 @@ package com.vaccine.controller;
 import com.vaccine.model.VacunaModel;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * TODO: Realiza lo mismo que en PersonaController y RegistroVacunaController
+ */
+
 @RestController
 @RequestMapping("/api/v1")
 public class VacunaController {
