@@ -30,7 +30,7 @@ public class RegistroVacunaController { // TODO: CREA ESTOS OBJETOS
      */
 
     @GetMapping("/consultarRegistroVacuna")
-    public ResponseEntity<String> consultarRegistroVacuna(@RequestParam("id") Integer id) {
+    public ResponseEntity<RegistroVacunaModel> consultarRegistroVacuna(@RequestParam("id") Integer id) {
         RegistroVacunaService vacunaService = new RegistroVacunaService();
         RegistroVacunaModel registroVacunaModel = vacunaService.consultarRegistroVacuna(id);
         return ResponseEntity.ok().body(registroVacunaModel);

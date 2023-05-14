@@ -16,8 +16,8 @@
         <meta charset ="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Formulario web de vacunas</title>
-        <link rel="stylesheet" href="css/formulario/style.css">
-        <link rel="stylesheet" href="css/formulario/reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
     </head>
     <body>
         <header>
@@ -34,7 +34,7 @@
         <h1>Registro general para pacientes</h1>
         <main>
             <section>
-                <form action="registro.php" method="POST">
+                <form method="POST">
                   <fieldset class="datos-personales">
                         <legend>Datos personales</legend>
                         <div >
@@ -121,12 +121,12 @@
                         </div>
                         <div class="">
                             <label for="seguro-medico">No</label>
-                            <input type="radio" name="seguro-medico" id="seguro-medico" placeholder="seguro-medico" required>
+                            <input type="radio" class="seguro-medico-hidden" name="seguro-medico" id="seguro-medico-no" placeholder="seguro-medico" required>
                             <label for="enfermedad-cronica">Si</label>
-                            <input type="radio" name="seguro-medico" id="seguro-medico" placeholder="seguro-medicoa" required>
+                            <input type="radio" class="seguro-medico-hidden" name="seguro-medico" id="seguro-medico-si" placeholder="seguro-medicoa" required>
                         </div>
                         <label for="matricula-seguro">Matricula ó Número de seguro medico</label>
-                        <input type="matricula-seguro" name="matricula-seguro" id="matricula-seguro" placeholder="matricula-seguro" required>
+                        <input class="hidden" type="matricula-seguro" name="matricula-seguro" id="matricula-seguro" placeholder="matricula-seguro" required>
                     </fieldset>
                     <div class="boton-caja">
                         <input class="boton-enviar" type="submit" name="Buscar-curp" id="Enviar" value="Terminar Registro" required>
@@ -134,5 +134,7 @@
                 </form>
             </section>
         </main>
+
+        <script type="text/javascript" src="formulario.js"></script>
     </body>
 </html>

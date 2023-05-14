@@ -36,23 +36,21 @@ public class PersonaController {
     }
 
     @PostMapping("/altaPersona")
-    public ResponseEntity<String> altaPersona(@RequestBody PersonasModel personaModel) {
+    public ResponseEntity<Object> altaPersona(@RequestBody PersonasModel personaModel) {
         PersonaService personaService = new PersonaService();
-        personaService.altaPersona(personaModel);
-        return ResponseEntity.ok().body("Paciente dado de alta con éxito");
+        return personaService.altaPersona(personaModel);
     }
 
     @PutMapping("/actualizarPersona")
-    public ResponseEntity<String> actualizarPersona(@RequestParam("curp") String CURP, @RequestBody PersonasModel personaModel) {
-        PersonaService personaService = new PersonaService();
-        personaService.actualizarPersona(CURP, personaModel);
-        return ResponseEntity.ok().body("Paciente actualizado con éxito");
+    public ResponseEntity<Object> actualizarPersona(@RequestParam("curp") String curp, @RequestBody PersonasModel personaModel) {
+        PersonaService personaService = new PersonaService(); // el constructor vacio permite que cual sea el valor
+        ResponseEntity rE = personaService.actualizarPersona(curp, personaModel); // que se le pase va a llenar los que pueda
+        return rE; // tener cuidado en post y put pues pueden colarse campos null
     }
 
     @DeleteMapping("/bajaPersona")
-    public ResponseEntity<String> bajaPersona(@RequestParam("curp") String CURP) {
+    public ResponseEntity<Object> bajaPersona(@RequestParam("curp") String CURP) {
         PersonaService personaService = new PersonaService();
-        personaService.bajaPersona(CURP);
-        return ResponseEntity.ok().body("Paciente dado de baja");
+        return personaService.bajaPersona(CURP);
     }
 }
