@@ -1,6 +1,6 @@
 create table registro_vacuna
 (
-    id           int          not null
+    id           int auto_increment
         primary key,
     personas_id  int          null,
     vacunas_id   int          null,

@@ -1,0 +1,69 @@
+<!-- 
+  página para registrar una nueva vacuna y
+  darla de alta en la base de datos.
+
+  1. Nombre de la vacuna
+  2. Lote/numero de la vacuna
+  3. Numeros de dosis por vacuna
+  4. Dosis de la vacuna
+  5. Periodo de aplicacion
+  6. Descripcion de la vacuna
+  Boton de dar de alta nueva vacuna
+  
+-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+
+    </header>
+    <main class="container flex flex--center flex--column">
+      <section>
+        <h1 class="card__title">Registrar Vacuna</h1>
+
+        <form >
+          <div class="input-container">
+              <!--nombre de la vacuna-->
+            <label class="input-label" for="name">Nombre de la vacuna</label>
+            <input name="name" id="name-vacuna" class="input" type="text" placeholder="Nombre de la vacuna"/>
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <!--lote/numero de la vacuna-->
+          <div class="input-container registry__folio-container">
+            <label class="input-label" for="Folio">Folio</label>
+            <input name="folio" id="folio" class="input" type="text" placeholder="Folio"/>
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <!--Numeros de dosis por vacuna-->
+          <div>
+            <label class="input-range" for="cantidad-dosis">Cantidad de dosis</label>
+            <input name="cantidad-dosis" id="cantidad-dosis" class="cantidad-dosis" type="range" min="1" max="" value="10"/>
+
+          </div>
+
+
+          <!--dosis de la vacuna-->
+          <div class="input-container">
+            <label class="input-label" for="numero-dosis">Numero de dosis</label>
+            <input name="name" id="name-vacuna" class="input" type="text" placeholder="Dosis"/>
+          </div>
+          <div class="input-container registry__date-container">
+            <label class="input-label" for="periodo">periodo de aplicacion</label>
+            <input name="periodo" id="periodo" class="periodo" type="text" placeholder="Periodo"/>
+          </div>
+          <!--descripcion de la vacuna-->
+          <div class="input-container registry__description-container">
+            <label class="input-label" for="description">Descripción</label>
+            <!--<input class="input" name="description" id="description" placeholder="Descripción"/>-->
+            <textarea class="texto-descripcion" cols="30" rows="10" placeholder="Inserte el texto aquí" ></textarea>
+          </div>
+          <button class="button">Dar de alta nueva vacuna</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

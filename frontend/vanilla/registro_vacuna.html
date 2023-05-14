@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+
+    </header>
+    <main class="container flex flex--center flex--column">
+      <section>
+        <h1 class="card__title">Registrar Vacuna</h1>
+        <form>
+            <div class="input-container">
+                <input name="name" id="curp-paciente" class="input" type="text" placeholder="CURP"/>
+                <!--nombre de la vacuna-->
+                <label class="input-label" for="name">CURP-PACIENTE</label>
+                <span class="input-message-error">Este campo no es valido</span>
+              </div>
+              <button>Buscar paciente</button>
+        </form>
+
+
+
+        <form >
+          <div class="input-container">
+            <input name="name" id="name-vacuna" class="input" type="text" placeholder="Nombre de la vacuna"/>
+            <!--nombre de la vacuna-->
+            <label class="input-label" for="name">Nombre de la vacuna</label>
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <!--dosis de la vacuna-->
+          <div class="input-container">
+            <input name="name" id="name-vacuna" class="input" type="text" placeholder="Dosis"/>
+            <!--nombre de la vacuna-->
+            <label class="input-label" for="name">Dosis</label>
+          </div>
+          <!--lote/numero de la vacuna-->
+          <div class="input-container registry__lote-container">
+            <input name="Lote" id="Lote" class="input" type="text" placeholder="Lote"/>
+            <label class="input-label" for="Lote">Lote</label>
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+
+          <div class="input-container registry__date-container">
+            <label class="input-label" for="date">Fecha</label>
+            <input name="date" id="date" class="date" type="date" placeholder="date"/>
+          </div>
+          <!--descripcion de la vacuna-->
+          <div class="input-container registry__description-container">
+            <input class="input" name="description" id="description" placeholder="Descripción"/>
+            <label class="input-label" for="description">Descripción</label>
+          </div>
+          <button class="button">Registrar vacuna</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
+

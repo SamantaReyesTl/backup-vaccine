@@ -1,0 +1,61 @@
+<!--
+    Inicio de sesion del paciente, donde unicamente tendra que ingresar su curp
+    para poder acceder a su informacion
+
+-->
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset ="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Registro web - vacunacion</title>
+        <link rel="stylesheet" href="css/inicio/reset.css">
+        <!--<link rel="stylesheet" href="css/inicio/style_inicio.css">--> 
+
+    </head>
+    <bod>
+        <header>
+            <div class="menu">
+                <nav>   
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="vacunas.html">Vacunas</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- <img class="banner" src="imagenes/injection-5722329_1280.jpg"  > -->
+        </header>
+
+        <main>
+            <section >
+                <!--inicio de sesion mediante curp del paciente-->
+                <h1 class="card__title">Inicio de sesión</h1>
+                <form  method="POST">
+                    <div class="input-container">
+                        <label class="input-label" for="curp">CURP</label>
+                        <input name="curp" id="curp" class="input" type="text" placeholder="CURP"/>
+                    </div>
+                    <input type="submit" name="buscar-CURP" id="buscar-CURP" value="buscar CURP" required>
+                    <div>
+                        <input type="button" name="iniciar" id="iniciar" value="iniciar" required>
+                    </div>
+                </form>
+
+            </section>
+
+
+        </main>
+        <!-- 
+             <footer>
+            <p>&Copyright</p>
+        </footer>
+        -->
+       
+
+
+
+
+    </body>
+
+</html>

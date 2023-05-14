@@ -1,6 +1,6 @@
 create table vacunas
 (
-    id              int          not null
+    id              int auto_increment
         primary key,
     folio_vacuna    varchar(255) null,
     nombre_vacuna   varchar(255) null,

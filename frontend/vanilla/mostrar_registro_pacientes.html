@@ -1,0 +1,45 @@
+<!--Crear una pagina donde:
+    - muestra al paciente una tabla con las vacunas que tiene aplicadas
+    - muestra una lista con las vacunas proximas a aplicarse -->
+<!-- Path: mostrar_registro_pacientes.html -->
+<!-- Compare this snippet from buscar_paciente.html: -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mostrar registro de pacientes</title>
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <header>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="vacunas.html">Vacunas</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section>
+                <h1 class="card__title">Mostrar registro de pacientes</h1>
+                <form method="POST">
+                    <div class="input-container">
+                        <label class="input-label" for="curp">CURP</label>
+                        <input name="curp" id="curp" class="input" type="text" placeholder="CURP"/>
+                    </div>
+                    <input type="submit" name="buscar-CURP" id="buscar-CURP" value="buscar CURP" required>
+                    <div>
+                        <input type="button" name="iniciar" id="iniciar" value="iniciar" required>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>&copy;</p>
+        </footer>
+    </body>
+</html>

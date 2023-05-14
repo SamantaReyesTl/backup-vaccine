@@ -1,0 +1,61 @@
+<!-- pagina para buscar un paciente en la base de datos
+    registrados los datos del paciente
+    1. Nombre del paciente
+    2. CURP
+    3. Edad
+    4. Lugar de residencia
+    5. Vacuna que se aplico
+    6. Fecha de aplicacion de la vacuna
+    Boton de buscar paciente
+
+-->
+<!DOCTYPE html>
+            
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <header>
+        </header>
+        <main class="container flex flex--center flex--column">
+            <section>
+                <h1 class="card__title">Buscar Paciente</h1>
+                <form >
+                    <div class="input-container">
+                        <!--nombre del paciente-->
+                        <label class="input-label" for="name">Nombre del paciente</label>
+                        <input name="name" id="name-paciente" class="input" type="text" placeholder="Nombre del paciente"/>
+                    </div>
+                    <!--curp del paciente-->
+                    <div class="input-container registry__curp-container">
+                        <label class="input-label" for="curp">CURP</label>
+                        <input name="curp" id="curp" class="input" type="text" placeholder="CURP"/>
+                    </div>
+                    <!--edad del paciente-->
+                    <div class="input-container registry__edad-container">
+                        <label class="input-label" for="edad">Edad</label>
+                        <input name="edad" id="edad" class="input" type="text" placeholder="Edad"/>
+                    </div>
+                    <!--lugar de residencia del paciente-->
+                    <div class="input-container registry__residencia-container">
+                        <label class="input-label" for="residencia">Region o Estado</label>
+                        <input name="residencia" id="residencia" class="input" type="text" placeholder="Lugar de residencia"/> 
+                    </div>
+                    <!--vacuna que se aplico-->
+                    <div class="input-container registry__vacuna-container">
+                        <label class="input-label" for="vacuna">Vacuna</label>
+                        <input name="vacuna" id="vacuna" class="input" type="text" placeholder="Vacuna"/>
+                    </div>
+                    <!--fecha de aplicacion de la vacuna-->
+                    <div class="input-container registry__fecha-container">
+                        <label class="input-label" for="fecha">Fecha de aplicación</label>
+                        <input name="fecha" id="fecha" class="input" type="date" placeholder="Fecha de aplicación"/>
+                    </div>
+                    <input class="boton-buscar" type="submit" value="Buscar"/>
+                </form>
+            </section>            
+        </main>
+    </body>
+</html>   
