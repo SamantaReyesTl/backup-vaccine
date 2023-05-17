@@ -2,6 +2,7 @@ package com.vaccine.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * En Java los modelos son clases que representan exactamente a las tablas de la base de datos.
@@ -15,6 +16,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class VacunasModel {
     private Integer id;
     private String folio;

@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 public class RegistroVacunaController { // TODO: CREA ESTOS OBJETOS
 
     /**
-     * Para estas funciones, se hace uso de la clase VacunaService, la cual se encarga de procesar
+     * Para estas funciones, se hace uso de la clase RegistroVacunaService, la cual se encarga de procesar
      * la informacion que se le pasa y hacer las consultas a la base de datos. Nosotros por comodidad
      * solo llamamos a los metodos de la clase VacunaService y nos resuelve todo.
      *
