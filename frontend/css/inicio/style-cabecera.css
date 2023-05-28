@@ -1,0 +1,42 @@
+@import url(variables.css);
+body{
+    background-color: var(--third-color);
+    
+}
+.menu-barra{ 
+    background-color: var(--contrast-light-color);
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    width: 940px;
+    margin: 0 auto;
+    color: var(--contrast-nigth-color);
+}
+
+nav {   
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;  
+}
+
+li {
+    list-style: none;
+    margin: 0 20px 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--contrast-nigth-color);
+}  
+

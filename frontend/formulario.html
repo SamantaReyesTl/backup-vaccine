@@ -1,0 +1,137 @@
+<!--
+    Formulario para toma de datos de pacientes, para su registro en la base de datos
+    y posterior registro de vacunas
+    datos a registrar:
+    1. Apellido paterno     2. Apellido materno
+    3. Nombre               4. Sexo
+    5. CURP                 6. Edad
+    7. Lugar de residencia  8. Vacuna que se aplico
+    9. Fecha de aplicacion de la vacuna
+    Boton de registrar paciente
+
+-->
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+        <meta charset ="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Formulario web de vacunas</title>
+        <link rel="stylesheet" href="css/formulario/style.css">
+        <link rel="stylesheet" href="css/formulario/reset.css">
+    </head>
+    <body>
+        <header>
+            <div class="cajas">
+                <nav>   
+                    <ul>
+                        <li><a href="panel_control.html">Panel de control</a></li>
+                        <li><a href="vacunas.html">Vacunas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <h1>Registrar paciente</h1>
+        <main>
+            <section>
+                <form action="registro.php" method="POST">
+                  <fieldset class="datos-personales">
+                        <legend>Datos personales</legend>
+                        <div >
+                            <label for="apellido-paterno">Apellido paterno</label>
+                            <input type="text" name="apellido-paterno" id="apellido-paterno" placeholder="apellido paterno" required>
+                        </div>
+                        <div>
+                            <label for="apellido-materno">Apellido materno</label>
+                            <input type="text" name="apellido-materno" id="apellido-materno" placeholder="apellido materno" required>
+                        </div>
+                        <div>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                        </div>
+                        <label for="sexo">Sexo</label>
+                        <div>
+                            <label for="sexo">M</label>
+                            <input type="checkbox" name="sexo" id="M" placeholder="M" required>
+                        </div>
+                        <div>
+                            <label for="sexo">H</label>
+                            <input type="checkbox" name="sexo" id="H" placeholder="H" required>
+                        </div>
+                        
+                        <div class="curp">
+                            <label for="curp">CURP</label>
+                            <input type="text" name="curp" id="curp" placeholder="CURP" required>
+                            <input type="button" name="Buscar-curp" id="Buscar-curp" value="Buscar CURP" required>
+                        </div>
+                        <div>
+                            <label for="fecha-nacimiento">Fecha de naciemiento</label>
+                            <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" placeholder="fecha nacimiento" required>
+                        </div>
+                       
+                    </fieldset>
+                    <fieldset class="datos-generales">
+                        <legend>Datos generales</legend>
+
+                        <div>
+                            <label for="calle">Calle</label>
+                            <input type="text" name="calle" id="calle" placeholder="calle" required>
+                        </div>
+                        
+                        <div>
+                            <label for="colonia">Colonia</label>
+                            <input type="text" name="colonia" id="colonia" placeholder="colonia" required>
+                        </div>
+                        <div>
+                            <label for="municipio">Municipio</label>
+                            <input type="text" name="municipio" id="municipio" placeholder="municipio" required>
+                        </div>
+                        <div>
+                            <label for="entidad-federativa">Entidad federativa</label>
+                            <input type="text" name="entidad-federativa" id="entidad-federativa" placeholder="entidad-federativa" required>
+                        </div>
+                        <div>
+                            <label for="cp">C.P</label>
+                            <input type="number" name="cp" id="cp" placeholder="cp" required>
+                        </div>
+                        <div>
+                            <label for="lugar-nacimiento">Lugar de nacimiento</label>
+                            <input type="text" name="lugar-nacimiento" id="lugar-nacimiento" placeholder="lugar de nacimiento" required>
+                        </div>
+
+                    </fieldset>
+                    <fieldset class="datos-medicos">
+                        <legend>Datos Médicos</legend>
+                        <div>
+                            <label for="tipo-sangre">Tipo de sangre</label>
+                            <input type="tipo-sangre" name="tipo-sangre" id="tipo-sangre" placeholder="tipo-sangre" required>
+
+                        </div>
+                        <div>
+                            <label for="peso">peso</label>
+                            <input type="peso" name="peso" id="peso" placeholder="peso" required>
+
+                        </div>
+                        <div>
+                            <label for="municipio">Altura</label>
+                            <input type="altura" name="altura" id="altura" placeholder="altura" required>
+                        </div>
+                        <div>
+                            <label for="seguro-medico">¿Cuenta con algun seguro médico?</label>
+                        </div>
+                        <div class="">
+                            <label for="seguro-medico">No</label>
+                            <input type="radio" name="seguro-medico" id="seguro-medico" placeholder="seguro-medico" required>
+                            <label for="enfermedad-cronica">Si</label>
+                            <input type="radio" name="seguro-medico" id="seguro-medico" placeholder="seguro-medicoa" required>
+                        </div>
+                        <label for="matricula-seguro">Matricula ó Número de seguro medico</label>
+                        <input type="matricula-seguro" name="matricula-seguro" id="matricula-seguro" placeholder="matricula-seguro" required>
+                    </fieldset>
+                    <div class="boton-caja">
+                        <input class="boton-enviar" type="submit" name="Buscar-curp" id="Enviar" value="Terminar Registro" required>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
