@@ -29,31 +29,27 @@ public class RegistroVacunaController { // TODO: CREA ESTOS OBJETOS
      * es buena practica debido a que no tenemos todo de golpe en un solo archivo.
      */
 
-    @GetMapping("/consultarRegistroVacuna")
-    public ResponseEntity<RegistroVacunaModel> consultarRegistroVacuna(@RequestParam("id") Integer id) {
+    @GetMapping("/obtenerRegistroVacuna")
+    public ResponseEntity<Object> consultarRegistroVacuna(@RequestParam("curp_personas") String curp) {
         RegistroVacunaService vacunaService = new RegistroVacunaService();
-        RegistroVacunaModel registroVacunaModel = vacunaService.consultarRegistroVacuna(id);
-        return ResponseEntity.ok().body(registroVacunaModel);
+        return vacunaService.consultarRegistroVacuna(curp);
     }
 
     @PostMapping("/altaRegistroVacuna")
-    public ResponseEntity<String> altaRegistroVacuna(@RequestBody RegistroVacunaModel registroVacunaModel) {
+    public ResponseEntity<Object> altaRegistroVacuna(@RequestBody RegistroVacunaModel registroVacunaModel) {
         RegistroVacunaService vacunaService = new RegistroVacunaService();
-        vacunaService.altaRegistroVacuna(registroVacunaModel);
-        return ResponseEntity.ok().body("Alta de registro de vacuna");
+        return vacunaService.altaRegistroVacuna(registroVacunaModel);
     }
 
     @PutMapping("/actualizarRegistroVacuna")
-    public ResponseEntity<String> actualizarRegistroVacuna(@RequestParam("id") Integer id, @RequestBody RegistroVacunaModel registroVacunaModel) {
+    public ResponseEntity<Object> actualizarRegistroVacuna(@RequestParam("folio") Integer id, @RequestBody RegistroVacunaModel registroVacunaModel) {
         RegistroVacunaService vacunaService = new RegistroVacunaService();
-        vacunaService.actualizarRegistroVacuna(id, registroVacunaModel);
-        return ResponseEntity.ok().body("Actualizar registro de vacuna");
+        return vacunaService.actualizarRegistroVacuna(id, registroVacunaModel);
     }
 
     @DeleteMapping("/bajaRegistroVacuna")
-    public ResponseEntity<String> bajaRegistroVacuna(@RequestParam("id") Integer id) {
+    public ResponseEntity<Object> bajaRegistroVacuna(@RequestParam("folio") Integer id) {
         RegistroVacunaService vacunaService = new RegistroVacunaService();
-        vacunaService.bajaRegistroVacuna(id);
-        return ResponseEntity.ok().body("Baja de registro de vacuna");
+        return vacunaService.bajaRegistroVacuna(id);
     }
 }

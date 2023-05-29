@@ -5,6 +5,9 @@ import com.vaccine.service.PersonaService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 /**
  * Los controladores son aquellos metodos que reciben las peticiones del cliente y mandan a otra clase
  * a que procese todo.
@@ -28,11 +31,16 @@ public class PersonaController {
      * es buena practica debido a que no tenemos todo de golpe en un solo archivo.
      */
 
-    @GetMapping("/consultarPersona")
-    public ResponseEntity<PersonasModel> consultarPersona(@RequestParam("curp") String CURP) {
+    @GetMapping("/obtenerPersonas")
+    public ResponseEntity<Object> consultarPersonas() {
         PersonaService personaService = new PersonaService();
-        PersonasModel personaModel = personaService.consultarPersona(CURP);
-        return ResponseEntity.ok().body(personaModel);
+        return personaService.consultarPersonas();
+    }
+
+    @GetMapping("/obtenerPersona")
+    public ResponseEntity<Object> consultarPersona(@RequestParam("curp") String CURP) {
+        PersonaService personaService = new PersonaService();
+        return personaService.consultarPersona(CURP);
     }
 
     @PostMapping("/altaPersona")
@@ -44,8 +52,8 @@ public class PersonaController {
     @PutMapping("/actualizarPersona")
     public ResponseEntity<Object> actualizarPersona(@RequestParam("curp") String curp, @RequestBody PersonasModel personaModel) {
         PersonaService personaService = new PersonaService(); // el constructor vacio permite que cual sea el valor
-        ResponseEntity rE = personaService.actualizarPersona(curp, personaModel); // que se le pase va a llenar los que pueda
-        return rE; // tener cuidado en post y put pues pueden colarse campos null
+        return personaService.actualizarPersona(curp, personaModel); // que se le pase va a llenar los que pueda
+        // tener cuidado en post y put pues pueden colarse campos null
     }
 
     @DeleteMapping("/bajaPersona")

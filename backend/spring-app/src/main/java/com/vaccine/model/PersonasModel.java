@@ -18,16 +18,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PersonasModel {
-    private Integer id;
     private String curp;
     private String nombre;
     private String apellidoPaterno;
     private String apellidoMaterno;
     private String fechaNacimiento;
+    private Integer edad;
     private String calle;
     private String numeroCasa;
     private String coloniaLocalidad;
-    private String municipioAlcaldia;
+    private String comunidad;
     private String codigoPostal;
     private String entidadFederativa;
     private String lugarNacimiento;

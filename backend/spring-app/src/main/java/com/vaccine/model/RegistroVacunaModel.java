@@ -2,6 +2,9 @@ package com.vaccine.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.sql.Date;
 
 /**
  * En Java los modelos son clases que representan exactamente a las tablas de la base de datos.
@@ -15,6 +18,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class RegistroVacunaModel {
 
     /**
@@ -22,14 +26,12 @@ public class RegistroVacunaModel {
      * esta tabla contiene una persona y una vacuna.
      */
 
-    private Integer id;
-    private Integer personasId;
+    private Integer folio;
+    private String curpPersonas;
     private Integer vacunasId;
-    private String region;
-    private String fechaVacuna; // fecha de vacunacion
+    private Integer noDosis;
+    private Date fechaVacuna; // fecha de vacunacion
+    private Date proximaVacuna;
     private String laboratorio;
     private String lote;
-    private String dosis;
-    private PersonasModel personaModel;
-    private VacunasModel vacunaModel;
 }

@@ -1,6 +1,6 @@
 package com.vaccine.service;
 
-import com.vaccine.jdbc.Conexion;
+import com.vaccine.jdbc.ConexionCreada;
 import com.vaccine.model.VacunasModel;
 import org.springframework.http.ResponseEntity;
 
@@ -10,8 +10,8 @@ import java.sql.ResultSet;
 
 public class VacunaService {
     public Object consultarVacuna(Integer id) {
-        Conexion conexion = new Conexion();
-        Connection connection = conexion.getConnection();
+        ConexionCreada conexionCreada = new ConexionCreada();
+        Connection connection = conexionCreada.getConnection();
 
         String query = "SELECT " +
                             "* " +
@@ -39,13 +39,13 @@ public class VacunaService {
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error al consultar vacuna "+e);
         } finally {
-            conexion.cerrarConexion();
+            conexionCreada.cerrarConexion();
         }
     }
 
     public Object altaVacuna(VacunasModel vacunaModel) {
-        Conexion conexion = new Conexion();
-        Connection connection = conexion.getConnection();
+        ConexionCreada conexionCreada = new ConexionCreada();
+        Connection connection = conexionCreada.getConnection();
 
         String query = "INSERT INTO " +
                             "vacunas " +
@@ -66,13 +66,13 @@ public class VacunaService {
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error al dar de alta vacuna");
         } finally {
-            conexion.cerrarConexion();
+            conexionCreada.cerrarConexion();
         }
     }
 
     public Object actualizarVacuna(Integer id, VacunasModel vacunaModel) {
-        Conexion conexion = new Conexion();
-        Connection connection = conexion.getConnection();
+        ConexionCreada conexionCreada = new ConexionCreada();
+        Connection connection = conexionCreada.getConnection();
 
         String query = "UPDATE " +
                             "vacunas " +
@@ -94,13 +94,13 @@ public class VacunaService {
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error al actualizar vacuna"+e);
         } finally {
-            conexion.cerrarConexion();
+            conexionCreada.cerrarConexion();
         }
     }
 
     public Object bajaVacuna(Integer id) {
-        Conexion conexion = new Conexion();
-        Connection connection = conexion.getConnection();
+        ConexionCreada conexionCreada = new ConexionCreada();
+        Connection connection = conexionCreada.getConnection();
 
         String query = "DELETE FROM " +
                             "vacunas " +
@@ -115,7 +115,7 @@ public class VacunaService {
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("Error al eliminar vacuna");
         } finally {
-            conexion.cerrarConexion();
+            conexionCreada.cerrarConexion();
         }
     }
 }
