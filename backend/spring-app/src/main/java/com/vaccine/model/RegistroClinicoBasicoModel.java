@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 public class RegistroClinicoBasicoModel {
     private String curp_personas;
     private String tipoSangre;
-    private Integer sexo;
+    private Boolean sexo;   //0 es mujer, 1 es hombre
     private Double peso;
     private Double altura;
     private String alergias;

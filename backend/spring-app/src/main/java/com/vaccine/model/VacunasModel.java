@@ -19,9 +19,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class VacunasModel {
     private Integer id;
-    private String folio;
-    private String edadVacunacion;
-    private String proposito;
-    private String nombreVacuna;
-    private String periodo;
+    //private String folio;
+    private String nombre_Vacuna;
+    private String enfermedad_Previene;
+    private Integer numero_Dosis;
+    private Integer edad_Vacunacion;
+    //private String proposito;
+    private Integer esquema_1;
+    private Integer esquema_2;
+    private Integer siguiente_Esquema;
+    //private String periodo;
 }

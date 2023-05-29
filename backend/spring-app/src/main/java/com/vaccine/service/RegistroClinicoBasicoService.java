@@ -30,7 +30,7 @@ public class RegistroClinicoBasicoService {
             resultSet.next();
             RegistroClinicoBasicoModel registroClinicoBasicoModel = new RegistroClinicoBasicoModel(
                     resultSet.getString("curp_personas"), resultSet.getString("tipo_sangre"),
-                    resultSet.getInt("sexo"), resultSet.getDouble("peso"),
+                    resultSet.getBoolean("sexo"), resultSet.getDouble("peso"),
                     resultSet.getDouble("altura"), resultSet.getString("alergias")
             );
             conexionCreada.cerrarConexion();
@@ -51,7 +51,7 @@ public class RegistroClinicoBasicoService {
             PreparedStatement preparedStatement = connection.prepareStatement(consulta);
             preparedStatement.setString(1,rcb.getCurp_personas());
             preparedStatement.setString(2, rcb.getTipoSangre());
-            preparedStatement.setInt(3, rcb.getSexo());
+            preparedStatement.setBoolean(3, rcb.getSexo());
             preparedStatement.setDouble(4, rcb.getPeso());
             preparedStatement.setDouble(5, rcb.getAltura());
             preparedStatement.setString(6, rcb.getAlergias());
@@ -75,7 +75,7 @@ public class RegistroClinicoBasicoService {
             PreparedStatement preparedStatement = connection.prepareStatement(consulta);
             preparedStatement.setString(1,rcb.getCurp_personas());
             preparedStatement.setString(2, rcb.getTipoSangre());
-            preparedStatement.setInt(3, rcb.getSexo());
+            preparedStatement.setBoolean(3, rcb.getSexo());
             preparedStatement.setDouble(4, rcb.getPeso());
             preparedStatement.setDouble(5, rcb.getAltura());
             preparedStatement.setString(6, rcb.getAlergias());
