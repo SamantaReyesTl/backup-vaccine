@@ -1,10 +1,10 @@
 @import url(variables.css);
 body{
-    background-color: var(--third-color);   
+    background-color: var(--third-color);
 }
 
 
-header{ 
+header{
     background-color: var(--contrast-light-color);
     height: 100px;
     width: 100%;
@@ -21,7 +21,7 @@ h1{
     margin-top: 20px;
     margin-left: 10%;
     margin-bottom: 20px;
-    
+
 }
 
 section{
@@ -35,7 +35,7 @@ section{
     color: var(--contrast-nigth-color);
 }
 
-nav {   
+nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -43,7 +43,7 @@ nav {
 
 ul {
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
 }
 
 li {
@@ -54,7 +54,7 @@ li {
 a {
     text-decoration: none;
     color: var(--contrast-nigth-color);
-}  
+}
 
 section{
     color: #FFFFFF;

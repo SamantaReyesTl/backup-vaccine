@@ -30,32 +30,32 @@ public class PersonaController {
      * Aqui no hay mucha logica de programacion, tan solo se relega la responsabilidad a otra clase, pero
      * es buena practica debido a que no tenemos todo de golpe en un solo archivo.
      */
-
+    //para persona
     @GetMapping("/obtenerPersonas")
     public ResponseEntity<Object> consultarPersonas() {
         PersonaService personaService = new PersonaService();
         return personaService.consultarPersonas();
     }
-
+    //para el medico-usuario
     @GetMapping("/obtenerPersona")
     public ResponseEntity<Object> consultarPersona(@RequestParam("curp") String CURP) {
         PersonaService personaService = new PersonaService();
         return personaService.consultarPersona(CURP);
     }
-
+    //para el medico-usuario
     @PostMapping("/altaPersona")
     public ResponseEntity<Object> altaPersona(@RequestBody PersonasModel personaModel) {
         PersonaService personaService = new PersonaService();
         return personaService.altaPersona(personaModel);
     }
-
+    //son parte del adminsitrador
     @PutMapping("/actualizarPersona")
     public ResponseEntity<Object> actualizarPersona(@RequestParam("curp") String curp, @RequestBody PersonasModel personaModel) {
         PersonaService personaService = new PersonaService(); // el constructor vacio permite que cual sea el valor
         return personaService.actualizarPersona(curp, personaModel); // que se le pase va a llenar los que pueda
         // tener cuidado en post y put pues pueden colarse campos null
     }
-
+    //son parte del adminsitrador
     @DeleteMapping("/bajaPersona")
     public ResponseEntity<Object> bajaPersona(@RequestParam("curp") String CURP) {
         PersonaService personaService = new PersonaService();

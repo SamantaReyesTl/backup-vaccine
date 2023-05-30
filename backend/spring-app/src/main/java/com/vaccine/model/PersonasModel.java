@@ -27,7 +27,7 @@ public class PersonasModel {
     private String calle;
     private String numeroCasa;
     private String coloniaLocalidad;
-    private String comunidad;
+    private String comunidad;   //Este corresponde al Municipio el frontend
     private String codigoPostal;
     private String entidadFederativa;
     private String lugarNacimiento;

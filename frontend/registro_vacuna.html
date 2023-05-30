@@ -1,3 +1,7 @@
+<!--
+  página para registrar una aplicacion de vacuna a un paciente
+-->
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -15,62 +19,66 @@
           </ul>
         </nav>
       </div>
-
     </header>
     <main class="container flex flex--center flex--column">
       <section>
         <h1 class="card__title">Registrar Vacuna al Paciente</h1>
         <form class="form-paciente">
-            <div class="input-container">
-              <!--nombre de la vacuna-->
-              <label class="input-label" for="name">CURP-PACIENTE</label>
-                <input name="name" id="curp-paciente" class="input" type="text" placeholder="CURP"/>
-                <span class="input-message-error">Este campo no es valido</span>
-              </div>
-              <div class="button-class="button-buscar-paciente>
-                <button class="button" type="button" onclick="" name="buscar-paciente" id="buscar-paciente" value="buscar-paciente" required>Buscar paciente</button>
-              </div>
-             </form>
+          <div class="input-container">
+            <!--nombre de la vacuna-->
+            <label class="input-label" for="curp-paciente">CURP-PACIENTE</label>
+            <input name="curp-paciente" id="curp-paciente" class="input" type="text" placeholder="CURP"/>
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <div class="button-class="button-buscar-paciente>
+            <button class="button" type="button" onclick="" name="buscar-paciente" id="buscar-paciente" value="buscar-paciente" required>Buscar paciente</button>
+          </div>
+        </form>
 
         <form class="form-vacuna" >
           <div class="input-container">
-              <!--nombre de la vacuna-->
-            <label class="input-label" for="name">Nombre de la vacuna</label>
-            <input name="name" id="name-vacuna" class="input" type="text" placeholder="Nombre de la vacuna"/>
+            <!--lote/numero de la vacuna-->
+            <div class="input-container registry__folio-container">
+              <label class="input-label" for="Folio">Folio</label>
+              <input name="folio" id="folio" class="input" type="text" placeholder="Folio"/>
+              <span class="input-message-error">Este campo no es valido</span>
+            </div>
+            <!--nombre de la vacuna-->
+            <label class="input-label" for="name-vacuna">Nombre de la vacuna</label>
+            <input name="name-vacuna" id="name-vacuna" class="input" type="text" placeholder="Nombre de la vacuna"/>
             <span class="input-message-error">Este campo no es valido</span>
           </div>
           <!--dosis de la vacuna-->
           <div class="input-container">
             <!--nombre de la vacuna-->
-            <label class="input-label" for="name">Dosis</label>
-            <input name="name" id="name-vacuna" class="input" type="text" placeholder="Dosis"/>
+            <label class="input-label" for="dosis">Dosis</label>
+            <input name="dosis" id="dosis" class="input" type="text" placeholder="Dosis"/>
           </div>
           <!--fecha de la vacuna-->
           <div class="input-container registry__fecha-container">
             <label class="input-label" for="fecha">Fecha para aplicación</label>
             <input name="fecha" id="fecha" class="input" type="date" placeholder="Fecha de aplicación"/>
           </div>
-           <!--fecha de la proxima vacuna-->
+          <!--fecha de la proxima vacuna-->
           <div class="input-container registry__fecha-container">
-            <label class="input-label" for="fecha">Fecha para proxima vacuna</label>
-            <input name="fecha" id="fecha" class="input" type="date" placeholder="Fecha de aplicación"/>
+            <label class="input-label" for="fecha-proxima">Fecha para proxima vacuna</label>
+            <input name="fecha-proxima" id="fecha-proxima" class="input" type="date" placeholder="Fecha de aplicación"/>
           </div>
-
-           <!--lote/numero de la vacuna-->
+          <!--laboratorio de la vacuna-->
+          <div class="input-container registry__description-container">
+            <label class="input-label" for="laboratorio">Laboratorio</label>
+            <input name="laboratorio" id="laboratorio" class="input" type="text" placeholder="laboratorio"/>
+          </div>
+          <!--lote/numero de la vacuna-->
           <div class="input-container registry__lote-container">
             <label class="input-label" for="Lote">Lote</label>
             <input name="Lote" id="Lote" class="input" type="text" placeholder="Lote"/>
             <span class="input-message-error">Este campo no es valido</span>
           </div>
-          <!--descripcion de la vacuna-->
-          <div class="input-container registry__description-container">
-            <label class="input-label" for="description">Descripción</label>
-            <textarea name="description" id="description" class="input" rows="5" cols="20" type="text" placeholder="Descripción"></textarea>
-          </div>
           <div class="button-caja">
             <button class="button" type="button" onclick="" name="registrar-vacuna" id="registrar-vacuna" value="registrar-vacuna" required>Registrar vacuna</button>
           </div>
-         </form>
+        </form>
       </section>
     </main>
   </body>
