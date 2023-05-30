@@ -18,6 +18,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/registrar_nueva_vacuna/reset.css"/>
     <link rel="stylesheet" href="css/registrar_nueva_vacuna/registrar_nueva_vacuna.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -36,10 +39,10 @@
 
         <form>
             <!--ID de la vacuna-->
-          <div class="input-container">
-            <label class="input-range" for="cantidad-dosis">ID</label>
+          <!--<div class="input-container">
+            <label class="input-range" for="id-vacuna">ID</label>
             <input name="id-vacuna" id="id-vacuna" class="input" type="text" pattern="[0-9]+"/>
-          </div>
+          </div>-->
               <!--nombre de la vacuna-->
           <div class="input-container">
             <label class="input-label" for="name-vacuna">Nombre de la vacuna</label>
@@ -55,31 +58,32 @@
           <!--Numeros de dosis por vacuna-->
           <div class="input-container">
             <label class="input-range" for="cantidad-dosis">Número de dosis</label>
-            <input name="cantidad-dosis" id="cantidad-dosis" class="cantidad-dosis" type="number"/>
+            <input name="cantidad-dosis" id="cantidad-dosis" class="cantidad-dosis" type="number" placeholder="Numero de dosis (0 es sin limite de dosis)"/>
           </div>
           <!--dosis de la vacuna-->
           <div class="input-container">
             <label class="input-label" for="edad">Edad</label>
-            <input name="edad" id="edad" class="input" type="text" placeholder="Edad"/>
+            <input name="edad" id="edad" class="input" type="text" placeholder="Edad minima para esta vacuna"/>
           </div>
           <!--Esquema 1-->
           <div class="input-container registry__date-container">
             <label class="input-label" for="esquema-1">Esquema 1</label>
-            <input name="esquema-1" id="esquema-1" class="input" type="text" placeholder="Esquema 1" pattern="[0-9]+"/>
+            <input name="esquema-1" id="esquema-1" class="input" type="text" placeholder="Cuantos meses de separacion habra entre cada dosis" pattern="[0-9]+"/>
           </div>
          <!--Esquema 2-->
           <div class="input-container registry__date-container">
             <label class="input-label" for="esquema-2">Esquema 2</label>
-            <input name="esquema-2" id="esquema-2" class="input" type="text" placeholder="Esquema 2" pattern="[0-9]+" />
+            <input name="esquema-2" id="esquema-2" class="input" type="text" placeholder="Cuantos meses de separacion habra entre cada dosis" pattern="[0-9]+" />
           </div>   
           <!--Siguiente esquema-->
           <div class="input-container registry__date-container">
             <label class="input-label" for="sigiente-esquema">Siguiente esquema</label>
-            <input name="sigiente-esquema" id="sigiente-esquema" class="input" type="text" placeholder="Siguiente esquema" pattern="[0-9]+"/>
+            <input name="sigiente-esquema" id="sigiente-esquema" class="input" type="text" placeholder="Cuantas dosis debe tomar para pasar del esquema 1 al 2" pattern="[0-9]+"/>
           </div>
           <button class="button" id="dar-alta" onclick="Create()">Dar de alta nueva vacuna</button>
         </form>
       </section>
     </main>
+    <script src="js/registro_nuevaVacuna/registro_nuevaVacuna.js"></script>
   </body>
 </html>

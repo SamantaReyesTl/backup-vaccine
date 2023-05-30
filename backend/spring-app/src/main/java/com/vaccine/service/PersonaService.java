@@ -69,14 +69,26 @@ public class PersonaService {
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(queryPersonas); // la conexion devuelve un prepare statement
-            prepare(preparedStatement, personaModel);
+            preparedStatement.setString(1, personaModel.getCurp());
+            preparedStatement.setString(2, personaModel.getNombre());
+            preparedStatement.setString(3, personaModel.getApellidoPaterno());
+            preparedStatement.setString(4, personaModel.getApellidoMaterno());
+            preparedStatement.setString(5, personaModel.getFechaNacimiento());
+            preparedStatement.setInt(6, 0);
+            preparedStatement.setString(7, personaModel.getCalle());
+            preparedStatement.setString(8, personaModel.getNumeroCasa());
+            preparedStatement.setString(9, personaModel.getColoniaLocalidad());
+            preparedStatement.setString(10, personaModel.getComunidad());
+            preparedStatement.setString(11, personaModel.getCodigoPostal());
+            preparedStatement.setString(12, personaModel.getEntidadFederativa());
+            preparedStatement.setString(13, personaModel.getLugarNacimiento());
             preparedStatement.executeUpdate();
 
-            // A futuro servira:
-            // ResultSet resultSet = preparedStatement.getGeneratedKeys(); // se obtienen las llaves generadas
+            //ResultSet resultSet = preparedStatement.getGeneratedKeys(); // se obtienen las llaves generadas
+            //resultSet.next(); // se obtiene la llave generada
 
             conexionCreada.cerrarConexion();
-            return ResponseEntity.ok().body("Datos insertados correctamente");
+            return ResponseEntity.ok().body("Se insertaron los datos correctamente");
         } catch (Exception e) {
             conexionCreada.cerrarConexion();
             return ResponseEntity.badRequest().body("Error al insertar los datos: "+e);

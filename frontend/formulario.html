@@ -18,6 +18,9 @@
         <title>Formulario web de vacunas</title>
         <link rel="stylesheet" href="css/formulario/style.css">
         <link rel="stylesheet" href="css/formulario/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -33,13 +36,13 @@
         <h1>Registrar paciente</h1>
         <main>
             <section>
-                <form action="registro.php" method="POST">
-                  <fieldset class="datos-personales">
+                <form id="formulario-personas" method="POST">
+                    <fieldset class="datos-personales">
                         <legend>Datos personales</legend>
                         <div class="curp">
                             <label for="curp">CURP</label>
                             <input type="text" name="curp" id="curp" placeholder="CURP" required>
-                            <input type="button" name="Buscar-curp" id="Buscar-curp" value="Buscar CURP" required>
+                            <input type="button" name="Buscar-curp" id="Buscar-curp" value="Buscar CURP" onclick="location.href='https://www.gob.mx/curp/'">
                         </div>
                         <div>
                             <label for="nombre">Nombre</label>
@@ -68,7 +71,7 @@
                         </div>
                         <div>
                             <label for="calle">Numero de casa</label>
-                            <input type="text" name="numero-casa" id="num-casa" placeholder="numero de casa" required>
+                            <input type="number" name="numero-casa" id="num-casa" placeholder="numero de casa" required>
                         </div>
                         
                         <div>
@@ -88,6 +91,10 @@
                             <input type="text" name="entidad-federativa" id="entidad-federativa" placeholder="entidad-federativa" required>
                         </div>
                         <div>
+                            <label for="comunidad">Comunidad</label>
+                            <input type="text" name="comunidad" id="comunidad" placeholder="comunidad" required>
+                        </div>
+                        <div>
                             <label for="lugar-nacimiento">Lugar de nacimiento</label>
                             <input type="text" name="lugar-nacimiento" id="lugar-nacimiento" placeholder="lugar de nacimiento" required>
                         </div>
@@ -102,11 +109,11 @@
                         <label class="sexo">Sexo</label>
                         <div>
                             <label for="sexo-M">M</label> <!--Mujer = 0-->
-                            <input type="checkbox" name="sexo-M" id="sexo-M" placeholder="M" required>
+                            <input type="checkbox" name="sexo-M" id="sexo-M" placeholder="M">
                         </div>
                         <div>
                             <label for="sexo-h">H</label> <!--Hombre = 1-->
-                            <input type="checkbox" name="sexo-H" id="sexo-H" placeholder="H" required>
+                            <input type="checkbox" name="sexo-H" id="sexo-H" placeholder="H">
                         </div>
                         <div>
                             <label for="peso">peso</label>
@@ -125,11 +132,11 @@
 
                     </fieldset>
                     <div class="boton-caja">
-                        <button class="boton-enviar" type="button" name="enviar" id="Enviar" value="Terminar Registro" onclick="darAlta()" required>Terminar Registro</button>
-            
+                        <button class="boton-enviar" type="button" name="enviar" id="Enviar" value="Terminar Registro">Terminar Registro</button>
                     </div>
                 </form>
             </section>
         </main>
+        <script src="js/formulario/formulario.js"></script>
     </body>
 </html>

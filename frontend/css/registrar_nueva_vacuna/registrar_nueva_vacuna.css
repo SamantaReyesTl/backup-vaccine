@@ -1,4 +1,7 @@
 @import url(variables.css);
+*{
+    font-family: 'Open Sans', sans-serif;
+}
 body{
     background-color: #588276;
     
@@ -46,8 +49,9 @@ li {
 }
 a {
     text-decoration: none;
-    color: #000000;
-}  
+    color: var(--contrast-nigth-color);
+    font-weight: 600;
+}
 section{
     color: #FFFFFF;
     margin: 10px 10px 10px;
@@ -98,4 +102,21 @@ input:invalid {
     margin: 15px 15px 15px;
     padding: 1em 5em 1em 5em;
     font-size: 20px;
+    border-radius: 14px;
+}
+.button:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+#esquema-1::placeholder {
+    font-size: 16px;
+}
+
+#esquema-2::placeholder {
+    font-size: 16px;
+}
+
+#sigiente-esquema::placeholder {
+    font-size: 12px;
 }
