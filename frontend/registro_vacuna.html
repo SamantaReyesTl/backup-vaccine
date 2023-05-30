@@ -27,7 +27,7 @@
         <form class="form-paciente">
             <div class="input-container">
               <!--nombre de la vacuna-->
-              <label class="input-label" for="name">CURP-PACIENTE</label>
+              <label class="input-label" for="curp-paciente">CURP-PACIENTE</label>
                 <input name="name" id="curp-paciente" class="input" type="text" placeholder="CURP"/>
                 <span class="input-message-error">Este campo no es valido</span>
               </div>
@@ -45,15 +45,15 @@
             <span class="input-message-error">Este campo no es valido</span>
           </div>
               <!--nombre de la vacuna-->
-            <label class="input-label" for="name">Nombre de la vacuna</label>
-            <input name="name" id="name-vacuna" class="input" type="text" placeholder="Nombre de la vacuna"/>
+            <label class="input-label" for="name-vacuna">Nombre de la vacuna</label>
+            <input name="name-vacuna" id="name-vacuna" class="input" type="text" placeholder="Nombre de la vacuna"/>
             <span class="input-message-error">Este campo no es valido</span>
           </div>
           <!--dosis de la vacuna-->
           <div class="input-container">
             <!--nombre de la vacuna-->
-            <label class="input-label" for="name">Dosis</label>
-            <input name="name" id="name-vacuna" class="input" type="text" placeholder="Dosis"/>
+            <label class="input-label" for="dosis">Dosis</label>
+            <input name="dosis" id="dosis" class="input" type="text" placeholder="Dosis"/>
           </div>
           <!--fecha de la vacuna-->
           <div class="input-container registry__fecha-container">
@@ -62,12 +62,12 @@
           </div>
            <!--fecha de la proxima vacuna-->
           <div class="input-container registry__fecha-container">
-            <label class="input-label" for="fecha">Fecha para proxima vacuna</label>
-            <input name="fecha" id="fecha" class="input" type="date" placeholder="Fecha de aplicación"/>
+            <label class="input-label" for="fecha-proxima">Fecha para proxima vacuna</label>
+            <input name="fecha-proxima" id="fecha-proxima" class="input" type="date" placeholder="Fecha de aplicación"/>
           </div>
           <!--laboratorio de la vacuna-->
           <div class="input-container registry__description-container">
-            <label class="input-label" for="description">Laboratorio</label>
+            <label class="input-label" for="laboratorio">Laboratorio</label>
             <input name="laboratorio" id="laboratorio" class="input" type="text" placeholder="laboratorio"/>
           </div>
             <!--lote/numero de la vacuna-->
@@ -76,7 +76,6 @@
               <input name="Lote" id="Lote" class="input" type="text" placeholder="Lote"/>
               <span class="input-message-error">Este campo no es valido</span>
             </div>
-
           <div class="button-caja">
             <button class="button" type="button" onclick="" name="registrar-vacuna" id="registrar-vacuna" value="registrar-vacuna" required>Registrar vacuna</button>
           </div>
