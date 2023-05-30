@@ -1,4 +1,8 @@
 @import url(variables.css);
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
 body{
     background-color: var(--third-color);   
 }
@@ -23,7 +27,12 @@ h1{
     margin-bottom: 20px;
     
 }
-
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 section{
     color: var(--contrast-light-color);
     margin: 10px 10px 10px;
@@ -54,7 +63,8 @@ li {
 a {
     text-decoration: none;
     color: var(--contrast-nigth-color);
-}  
+    font-weight: 600;
+}
 
 section{
     color: #FFFFFF;
@@ -69,6 +79,7 @@ form{
     background-color: #FFFFFF;
     border: 3px solid #BAFAE8;
     border-radius: 3px;
+    padding-left: 4px;
 }
 
 .input-container{
@@ -87,4 +98,19 @@ form{
     margin: 15px 15px 15px;
     padding: 1em 5em 1em 5em;
     font-size: 20px;
+    border-radius: 14px;
+}
+
+.button:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+.table-response{
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 20px;
+    color: #FFFFFF;
+
 }
