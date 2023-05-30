@@ -16,13 +16,20 @@ function registroVacuna(){
 }
 /*botones de inicio persona/paciente */
 function mostrar(){
-    window.location.href = "mostrar_registros_vacunas.html";
+    window.location.href = "";
 }
 function actualizar(){
-    window.location.href = "actualizar_registros_vacunacion.html";
+    window.location.href = "al";
 }
 function eliminar(){
-    window.location.href = "eliminar_registros_vacunacion.html";
+    window.location.href = "";
+}
+/*btones de administrador */
+function usuarios(){
+    window.location.href = "opcion_usuario.html";
+}
+function vacunas(){
+    window.location.href = "opcion_vacunas.html";
 }
 
 /** metodo para que solo se pueda seleccionar una opcion del checkbox */

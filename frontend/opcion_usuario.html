@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ES">
+    <head>
+        <meta charset ="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Opcion Usuario</title>
+        <link rel="stylesheet" href="css/formulario/style.css">
+        <link rel="stylesheet" href="css/formulario/reset.css">
+    </head>
+    <body>
+        <header>
+            <div class="cajas">
+                <nav>   
+                    <ul>
+                        <li><a href="mostrar_registro_pacientes.html">Panel de administrador</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <h1>Usuarios</h1>
+        <main>
+            <section>
+                <form action="registro.php" method="POST">
+                  <fieldset class="datos-personales">
+                        <legend>Dar de alta usuarios</legend>
+                        <div class="curp">
+                            <label for="curp">ID</label>
+                            <input type="text" name="id" id="curp" placeholder="id" required>
+                        </div>
+                        <div>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="apellido-paterno">
+                            <label for="apellido-paterno">Contraseña</label>
+                            <input type="text" name="apellido-paterno" id="apellido-paterno" placeholder="contraseña" required>
+                        </div>
+                        <label class="admi">¿Es administrador?</label>
+                        <div>
+                            <label for="admi-S">Si</label> <!--si = 0-->
+                            <input type="checkbox" name="admi-S" id="admi-S" placeholder="Si" required>
+                        </div>
+                        <div>
+                            <label for="admi-N">No</label> <!--No = 1-->
+                            <input type="checkbox" name="admi-N" id="admi-N" placeholder="No" required>
+                        </div>
+
+                        <button class="boton-enviar" type="button" name="enviar" id="dar-alta" value="imput" onclick="darAlta()" required>Dar de alta</button>
+                    </fieldset>
+
+                    <fieldset class="datos-generales">
+                        <legend>Mostrar ususarios</legend>
+
+                        <div>
+                            <label for="mostrar-nombre">Nombre</label>
+                            <input type="text" name="mostrar-nombre" id="mostrar-nombre" placeholder="mostrar-nombre" required>
+                        </div>
+                       
+                        <button class="boton-enviar" type="button" name="enviar" id="Enviar" value="Terminar Registro" onclick="darAlta()" required>Mostrar</button>
+                    </fieldset>
+
+                    <fieldset class="datos-medicos">
+                        <legend>Eliminar usuarios</legend>
+                        <div>
+                            <label for="tipo-sangre">Nombre de usuario</label>
+                            <input type="tipo-sangre" name="tipo-sangre" id="tipo-sangre" placeholder="Nombre" required>
+                        </div>
+                        <div class="boton-caja">
+                            <button class="boton-enviar" type="button" name="enviar" id="eliminar" value="Terminar Registro" onclick="" required>Eliminar</button>
+                        </div>
+                    </fieldset>
+                   
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
+

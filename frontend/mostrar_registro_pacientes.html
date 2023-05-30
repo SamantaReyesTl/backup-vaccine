@@ -7,35 +7,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>Mostrar registro de pacientes</title>
-        <link rel="stylesheet" href="css/registro_pacientes_admi/reset.css">
-        <link rel="stylesheet" href="css/registro_pacientes_admi/style-registro-pacientes.css">
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="css/panel_control/reset.css">
+       <link rel="stylesheet" href="css/panel_control/panel_control.css">
+       <title>Panel de administrador</title>
     </head>
+    <header>
+        <div class="cajas">
+            <nav>   
+                <ul>
+                    <li><a href="index_medico.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <body>
-        <header>
-            <div class="menu">
-                <nav>
-                    <ul>
-                        <li><a href="index_admi.html">Inicio</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
         <main>
-            <section>
-                <h1 class="card__title">Mostrar registro de personas</h1>
-                <form method="POST">
-                    <div class="input-container">
-                        <label class="input-label" for="curp">CURP</label>
-                        <input name="curp" id="curp" class="input" type="text" placeholder="CURP"/>
-                    </div>
-                    <input type="submit" name="buscar-CURP" id="buscar-CURP" value="buscar CURP" required>
-                    <div>
-                        <button class="button" type="button" name="buscar" id="buscar" value="buscar" onclick="Create()" required>Buscar</button>
-                    </div>
-                </form>
+            <section class="botones">
+                <div class="Botones-opcion">
+                    <button class="button-opcion" type="button" onclick="usuarios()" name="usuario" id="vacuna" value="usuarios" required>Usuarios</button>
+                    <button class="button-opcion" type="button" onclick="vacunas()" name="vacuna" id="vacuna" value="vacuna" required>Vacunas </button>
+
+                </div>
             </section>
         </main>
+        <script src="js/botones.js"></script>
     </body>
 </html>

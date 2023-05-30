@@ -9,33 +9,51 @@
     <head>
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <link rel="stylesheet" href="css/panel_control/reset.css">
-       <link rel="stylesheet" href="css/panel_control/panel_control.css">
-       <title>Panel Persona</title>
+       <link rel="stylesheet" href="css/formulario/reset.css">
+       <link rel="stylesheet" href="css/formulario/style.css">
+       <title>Personas</title>
     </head>
-    <header>
-        <div class="cajas">
-            <nav>   
-                <ul>
-                    <li><a href="index_medico.html">Inicio</a></li>
-                    <li><a>Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <body>
+        <header>
+            <div class="cajas">
+                <nav>   
+                    <ul>
+                        <li><a href="index_medico.html">Inicio</a></li>
+                        <li><a>Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <h1>Registros de vacunación de personas</h1>
         <main>
-            <section class="botones">
-                <div class="Botones-opcion">
-                    <button class="button-opcion" type="button" onclick="mostrar()" name="mostrar-registros" id="mostrar-registros" value="mostrar-registros" required>Mostrar registros de vacunación</button>
-                    <button class="button-opcion" type="button" onclick="actualizar()" name="actualizar-registro" id="actualizar-registro" value="actualizar-registro" required>Actualizar registro de vacunación</button>
-                    <button class="button-opcion" type="button" onclick="eliminar()" name="eliminar-registro" id="eliminar-registro" value="eliminar-registro" required> Eliminar registro de vacunación</button>
-
-                </div>
+            <section>
+                <form action="registro.php" method="POST">
+                  <fieldset class="datos-personales">
+                        <legend>Mostrar registros de vacunas</legend>
+                        <div class="curp">
+                            <label for="curp">CURP</label>
+                            <input type="text" name="curp" id="curp" placeholder="curp" required>
+                        </div>
+                        
+                        <button class="boton-enviar" type="button" name="enviar" id="Enviar" value="Terminar Registro" onclick="darAlta()" required>Consultar</button>   
+                    </fieldset>
+                    
+                    <fieldset class="datos-generales">
+                        <legend>Eliminar registro</legend>
+                        <div class="input-container registry__curp-container">
+                            <label class="input-label" for="id">ID</label>
+                            <input name="id" id="id" class="input" type="text" placeholder="ID"/>
+                        </div>
+                        <div class="boton-caja">
+                            <button class="boton-enviar" type="button" name="enviar" id="Enviar" value="Terminar Registro" onclick="eliminar()" required>Eliminar</button>
+                        </div>
+                    
+                    </fieldset>
+                   
+                </form>
             </section>
         </main>
-        <script src="js/botones.js"></script>
     </body>
 </html>
 
