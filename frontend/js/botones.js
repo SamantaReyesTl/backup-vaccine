@@ -14,6 +14,16 @@ function buscarPersona(){
 function registroVacuna(){
     window.location.href = "registro_vacuna.html";
 }
+/*botones de inicio persona/paciente */
+function mostrar(){
+    window.location.href = "mostrar_registros_vacunas.html";
+}
+function actualizar(){
+    window.location.href = "actualizar_registros_vacunacion.html";
+}
+function eliminar(){
+    window.location.href = "eliminar_registros_vacunacion.html";
+}
 
 /** metodo para que solo se pueda seleccionar una opcion del checkbox */
 function check(id){

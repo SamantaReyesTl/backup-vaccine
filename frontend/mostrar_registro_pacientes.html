@@ -17,14 +17,14 @@
             <div class="menu">
                 <nav>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index_admi.html">Inicio</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         <main>
             <section>
-                <h1 class="card__title">Mostrar registro de pacientes</h1>
+                <h1 class="card__title">Mostrar registro de personas</h1>
                 <form method="POST">
                     <div class="input-container">
                         <label class="input-label" for="curp">CURP</label>
@@ -32,13 +32,10 @@
                     </div>
                     <input type="submit" name="buscar-CURP" id="buscar-CURP" value="buscar CURP" required>
                     <div>
-                        <input type="button" name="iniciar" id="iniciar" value="iniciar" required>
+                        <button class="button" type="button" name="buscar" id="buscar" value="buscar" onclick="Create()" required>Buscar</button>
                     </div>
                 </form>
             </section>
         </main>
-        <footer>
-            <p>&copy;</p>
-        </footer>
     </body>
 </html>

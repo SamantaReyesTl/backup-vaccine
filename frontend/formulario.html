@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html lang="ES">
     <head>
-        <meta charset ="UTF-8">
+        <meta charset ="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Formulario web de vacunas</title>
         <link rel="stylesheet" href="css/formulario/style.css">
@@ -22,7 +22,7 @@
     <body>
         <header>
             <div class="cajas">
-                <nav>
+                <nav>   
                     <ul>
                         <li><a href="panel_control.html">Panel de control</a></li>
                         <li><a href="vacunas.html">Vacunas</a></li>
@@ -34,7 +34,7 @@
         <main>
             <section>
                 <form action="registro.php" method="POST">
-                    <fieldset class="datos-personales">
+                  <fieldset class="datos-personales">
                         <legend>Datos personales</legend>
                         <div class="curp">
                             <label for="curp">CURP</label>
@@ -57,7 +57,7 @@
                             <label for="fecha-nacimiento">Fecha de naciemiento</label>
                             <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" placeholder="fecha nacimiento" required>
                         </div>
-
+                       
                     </fieldset>
                     <fieldset class="datos-generales">
                         <legend>Datos generales</legend>
@@ -70,7 +70,7 @@
                             <label for="calle">Numero de casa</label>
                             <input type="text" name="numero-casa" id="num-casa" placeholder="numero de casa" required>
                         </div>
-
+                        
                         <div>
                             <label for="colonia">Colonia</label>
                             <input type="text" name="colonia" id="colonia" placeholder="colonia" required>
@@ -101,12 +101,12 @@
                         </div>
                         <label class="sexo">Sexo</label>
                         <div>
-                            <label for="sexo-M">M</label> <!--Mujer = 0-->
-                            <input type="checkbox" name="sexo-M" id="sexo-M" placeholder="M" required>
+                            <label for="sexo">M</label> <!--Mujer = 0-->
+                            <input type="checkbox" name="sexo" id="M" placeholder="M" required>
                         </div>
                         <div>
-                            <label for="sexo-H">H</label> <!--Hombre = 1-->
-                            <input type="checkbox" name="sexo" id="sexo-H" placeholder="H" required>
+                            <label for="sexo">H</label> <!--Hombre = 1-->
+                            <input type="checkbox" name="sexo" id="H" placeholder="H" required>
                         </div>
                         <div>
                             <label for="peso">peso</label>
@@ -126,6 +126,7 @@
                     </fieldset>
                     <div class="boton-caja">
                         <button class="boton-enviar" type="button" name="enviar" id="Enviar" value="Terminar Registro" onclick="darAlta()" required>Terminar Registro</button>
+            
                     </div>
                 </form>
             </section>

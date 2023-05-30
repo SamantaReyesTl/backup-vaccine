@@ -1,4 +1,4 @@
-<!--
+<!-- 
   página para registrar una nueva vacuna y
   darla de alta en la base de datos.
 
@@ -9,7 +9,7 @@
   5. Periodo de aplicacion
   6. Descripcion de la vacuna
   Boton de dar de alta nueva vacuna
-
+  
 -->
 <!DOCTYPE html>
 <html lang="es">
@@ -28,6 +28,7 @@
           </ul>
         </nav>
       </div>
+
     </header>
     <main class="container flex flex--center flex--column">
       <section>
@@ -36,49 +37,49 @@
         <form >
           <div class="input-container">
             <!--ID de la vacuna-->
-            <div class="input-container">
-              <label class="input-range" for="cantidad-dosis">ID</label>
-              <input name="id-vacuna" id="id-vacuna" class="input" type="text" pattern="[0-9]+"/>
-            </div>
-            <!--nombre de la vacuna-->
-            <div class="input-container">
-              <label class="input-label" for="name-vacuna">Nombre de la vacuna</label>
-              <input name="name-vacuna" id="name-vacuna" class="input" type="text" placeholder="Nombre de la vacuna"/>
-              <span class="input-message-error">Este campo no es valido</span>
-            </div>
-            <!--enfermedad que previene la vacuna-->
-            <div class="input-container">
+          <div class="input-container">
+            <label class="input-range" for="cantidad-dosis">ID</label>
+            <input name="id-vacuna" id="id-vacuna" class="input" type="text" pattern="[0-9]+"/>
+          </div>
               <!--nombre de la vacuna-->
-              <label class="input-label" for="Enfermedad-previene">Enfermedad que previene</label>
-              <input name="Enfermedad-previene" id="Enfermedad-previene" class="input" type="text" placeholder="Enfermedad previene"/>
-            </div>
-            <!--Numeros de dosis por vacuna-->
-            <div class="input-container">
-              <label class="input-range" for="cantidad-dosis">Número de dosis</label>
-              <input name="cantidad-dosis" id="cantidad-dosis" class="cantidad-dosis" type="number"/>
-            </div>
-            <!--dosis de la vacuna-->
-            <div class="input-container">
-              <label class="input-label" for="edad">Edad</label>
-              <input name="edad" id="edad" class="input" type="text" placeholder="Edad"/>
-            </div>
-            <!--Esquema 1-->
-            <div class="input-container registry__date-container">
-              <label class="input-label" for="esquema-1">Esquema 1</label>
-              <input name="esquema-1" id="esquema-1" class="input" type="text" placeholder="Esquema 1" pattern="[0-9]+"/>
-            </div>
-            <!--Esquema 2-->
-            <div class="input-container registry__date-container">
-              <label class="input-label" for="esquema-2">Esquema 2</label>
-              <input name="esquema-2" id="esquema-2" class="input" type="text" placeholder="Esquema 2" pattern="[0-9]+" />
-            </div>
-            <!--Siguiente esquema-->
-            <div class="input-container registry__date-container">
-              <label class="input-label" for="sigiente-esquema">Siguiente esquema</label>
-              <input name="sigiente-esquema" id="sigiente-esquema" class="input" type="text" placeholder="Siguiente esquema" pattern="[0-9]+"/>
-            </div>
-              <button class="button" id="dar-alta" onclick="Create()">Dar de alta nueva vacuna</button>
-            </div>
+          <div class="input-container">
+            <label class="input-label" for="name-vacuna">Nombre de la vacuna</label>
+            <input name="name-vacuna" id="name-vacuna" class="input" type="text" placeholder="Nombre de la vacuna"/>
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <!--enfermedad que previene la vacuna-->
+          <div class="input-container">
+            <!--nombre de la vacuna-->
+            <label class="input-label" for="Enfermedad-previene">Enfermedad que previene</label>
+            <input name="Enfermedad-previene" id="Enfermedad-previene" class="input" type="text" placeholder="Enfermedad previene"/>
+          </div>
+          <!--Numeros de dosis por vacuna-->
+          <div class="input-container">
+            <label class="input-range" for="cantidad-dosis">Número de dosis</label>
+            <input name="cantidad-dosis" id="cantidad-dosis" class="cantidad-dosis" type="number"/>
+          </div>
+          <!--dosis de la vacuna-->
+          <div class="input-container">
+            <label class="input-label" for="edad">Edad</label>
+            <input name="edad" id="edad" class="input" type="text" placeholder="Edad"/>
+          </div>
+          <!--Esquema 1-->
+          <div class="input-container registry__date-container">
+            <label class="input-label" for="esquema-1">Esquema 1</label>
+            <input name="esquema-1" id="esquema-1" class="input" type="text" placeholder="Esquema 1" pattern="[0-9]+"/>
+          </div>
+         <!--Esquema 2-->
+          <div class="input-container registry__date-container">
+            <label class="input-label" for="esquema-2">Esquema 2</label>
+            <input name="esquema-2" id="esquema-2" class="input" type="text" placeholder="Esquema 2" pattern="[0-9]+" />
+          </div>   
+          <!--Siguiente esquema-->
+          <div class="input-container registry__date-container">
+            <label class="input-label" for="sigiente-esquema">Siguiente esquema</label>
+            <input name="sigiente-esquema" id="sigiente-esquema" class="input" type="text" placeholder="Siguiente esquema" pattern="[0-9]+"/>
+          </div>
+
+          <button class="button" id="dar-alta" onclick="Create()">Dar de alta nueva vacuna</button>
         </form>
       </section>
     </main>

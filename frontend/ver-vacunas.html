@@ -1,11 +1,41 @@
 <!-- 
     Mostrará la información de las vacunas que se han aplicado a cada 
     paciente registrado y las que tienen programada por aplicar.
-    AUN NO TERMINADO
+    se mostrara un menu con las opciones, parecido a "panel de control"
 -->
 
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="css/panel_control/reset.css">
+       <link rel="stylesheet" href="css/panel_control/panel_control.css">
+       <title>Panel Persona</title>
+    </head>
+    <header>
+        <div class="cajas">
+            <nav>   
+                <ul>
+                    <li><a href="index_medico.html">Inicio</a></li>
+                    <li><a>Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <body>
+        <main>
+            <section class="botones">
+                <div class="Botones-opcion">
+                    <button class="button-opcion" type="button" onclick="mostrar()" name="mostrar-registros" id="mostrar-registros" value="mostrar-registros" required>Mostrar registros de vacunación</button>
+                    <button class="button-opcion" type="button" onclick="actualizar()" name="actualizar-registro" id="actualizar-registro" value="actualizar-registro" required>Actualizar registro de vacunación</button>
+                    <button class="button-opcion" type="button" onclick="eliminar()" name="eliminar-registro" id="eliminar-registro" value="eliminar-registro" required> Eliminar registro de vacunación</button>
 
-
-
+                </div>
+            </section>
+        </main>
+        <script src="js/botones.js"></script>
+    </body>
+</html>
 

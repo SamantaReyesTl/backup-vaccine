@@ -6,7 +6,7 @@
 }
 main{
     background: var(--third-color);
-    width: 100vw;
+    width: 90vw;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -20,9 +20,9 @@ main{
     background-color: var(--contrast-light-color);
     border-radius: 10px;
     box-shadow: var(--shadow);
-    width: 100%;
-    max-width: 45rem;
-    padding: 1.75rem;
+    width: 90%;
+    max-width: 30rem;
+    padding: 1.50rem;
     box-sizing: border-box;
     margin-bottom: 1rem;
   }
@@ -58,178 +58,164 @@ form{
 }
 
 .formulario {
-    margin-top: 2rem;
-  }
+  margin-top: 2rem;
+}
   
-  .form__label {
-    font-size: var(--font-size-form-fieldset);
-    margin-bottom: 1rem;
-  }
+.form__label {
+  font-size: var(--font-size-form-fieldset);
+  margin-bottom: 1rem;
+}
+.input-container {
+  font-weight: var(--font-weigth-input);
+  position: relative;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
   
-  .input-container {
-    font-weight: var(--font-weigth-input);
-    position: relative;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    box-sizing: border-box;
-  }
+.input {
+  box-sizing: border-box;
+  padding: 1.375rem 0.5rem 0.5rem;
+  height: 3.25rem;
+  width: 100%;
+}
   
-  .input {
-    box-sizing: border-box;
-   padding: 1.375rem 0.5rem 0.5rem;
-    height: 3.25rem;
-    width: 100%;
-  }
+.input::placeholder {
+  visibility: hidden;
+  color: var(--contrast-nigth-color);
+}
   
-  .input::placeholder {
-    visibility: hidden;
-    color: #00000000;
-  }
+.input:focus {
+  outline: none;
+}
   
-  .input:focus {
-    outline: none;
-  }
+.input-label {
+  position: absolute;
+  top: 1.375rem;
+  left: 0.5rem;
+  font-size: var(--font-size-input-label);
+  transition: all 0.25s;
+}
   
-  .input-label {
-    position: absolute;
-    top: 1.375rem;
-    left: 0.5rem;
-    font-size: var(--font-size-input-label);
+.input:not(:placeholder-shown) + .input-label,
+.input:focus + .input-label {
+  font-size: 0.875rem;
+  top: 0.25rem;
+  transition: all 0.25s;
+}
   
-    transition: all 0.25s;
-  }
+.input-container--invalid {
+  margin-bottom: 0.5rem;
+}
   
-  .input:not(:placeholder-shown) + .input-label,
-  .input:focus + .input-label {
-    font-size: 0.875rem;
-    top: 0.25rem;
-    transition: all 0.25s;
-  }
+.input-container--invalid .input {
+  border: 1px solid var(--warning-color);
+  border-radius: 7px;
+}
   
-  .input-container--invalid {
-    margin-bottom: 0.5rem;
-  }
+.input-container--invalid .input-label {
+  color: var(--warning-color);
+}
   
-  .input-container--invalid .input {
-    border: 1px solid var(--warning-color);
-    border-radius: 7px;
-  }
+.input-message-error {
+  display: none;
+}
   
-  .input-container--invalid .input-label {
-    color: var(--warning-color);
-  }
+.input-container--invalid .input-message-error {
+  color: var(--warning-color);
+  display: block;
+  margin-top: 0.5rem;
+  padding-left: 0.2rem;
+}
   
-  .input-message-error {
-    display: none;
-  }
+.textarea {
+  box-sizing: border-box;
+  border: 1px solid var(--secondary-color);
+  padding: 0.5rem;
+  border-radius: 7px;
+  width: 100%;  
+  min-height: 3rem;
+}
+.textarea-container {
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: var(--font-weigth-input);
+}
   
-  .input-container--invalid .input-message-error {
-    color: var(--warning-color);
-    display: block;
-    margin-top: 0.5rem;
-    padding-left: 0.5rem;
-  }
+.textarea::placeholder {
+  visibility: hidden;
+}
   
-  .textarea {
-    box-sizing: border-box;
-    border: 1px solid var(--secondary-color);
-    padding: 0.5rem;
-    border-radius: 7px;
-    width: 100%;
-    min-height: 3rem;
-  }
+.textarea:focus {
+  outline: none;
+}
   
-  .textarea-container {
-    position: relative;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-weight: var(--font-weigth-input);
-  }
+.textarea-label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: var(--font-size-input-label);
+  transition: all 0.25s;
+}
   
-  .textarea::placeholder {
-    visibility: hidden;
-  }
+.textarea:not(:placeholder-shown) + .textarea-label,
+.textarea:focus + .textarea-label {
+  font-size: 0.875rem;
+  top: -1.25rem;
+  transition: all 0.25s;
+}
+.textarea-container--invalid .textarea {
+  border: 1px solid var(--warning-color);
+}
   
-  .textarea:focus {
-    outline: none;
-  }
-  
-  .textarea-label {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    font-size: var(--font-size-input-label);
-    transition: all 0.25s;
-  }
-  
-  .textarea:not(:placeholder-shown) + .textarea-label,
-  .textarea:focus + .textarea-label {
-    font-size: 0.875rem;
-    top: -1.25rem;
-    transition: all 0.25s;
-  }
-  /*
-  .textarea-container--invalid {
-    margin-bottom: 0.5rem;
-  }
-  */
-  .textarea-container--invalid .textarea {
-    border: 1px solid var(--warning-color);
-  }
-  
-  .textarea-container--invalid .textarea-label {
-    color: var(--warning-color);
-  }
-  
-  .textarea-mensagem-erro {
-    display: none;
-  }
- 
-  
+.textarea-container--invalid .textarea-label {
+  color: var(--warning-color);
+}
+.textarea-mensagem-erro {
+  display: none;
+}
+   
 .textarea-container--invalid .textarea-mensagem-erro {
   display: block;
   color: var(--warning-color);
   margin-top: 0.5rem;
   padding-left: 0.5rem;
 }
-  
-
-
-
 
 .button {
-    display: block;
-    background-color: var(--third-color);
-    border-radius: 7px;
-    width: 100%;
-    margin-top: 1rem;
-    max-width: 20rem;
-    padding: 1.125rem;
-    box-sizing: border-box;
-    color: var(--contrast-light-color);
-    font-size: var(--font-size-button);
-    align-self: center;
-    text-align: center;
-  }
+  display: block;
+  background-color: var(--third-color);
+  border-radius: 7px;
+  width: 100%;
+  margin-top: 1rem;
+  max-width: 20rem;
+  padding: 1.125rem;
+  box-sizing: border-box;
+  color: var(--contrast-light-color);
+  font-size: var(--font-size-button);
+  align-self: center;
+  text-align: center;
+}
   
-  .simple-button {
-    border: none;
-    background-color: unset;
-  }
+.simple-button {
+  border: none;
+  background-color: unset;
+}
   
-  .simple-button--add {
-    color: var(--primary-color);
-  }
+.simple-button--add {
+  color: var(--primary-color);
+}
   
-  .simple-button--delete {
-    color: var(--warning-color);
-  }
+.simple-button--delete {
+  color: var(--warning-color);
+}
   
-  .simple-button--edit {
-    color: var(--success-color);
-  }
+.simple-button--edit {
+  color: var(--success-color);
+}
   
 
 

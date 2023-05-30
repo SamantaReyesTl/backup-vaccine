@@ -1,9 +1,9 @@
 @import url(variables.css);
 body{
     background-color: var(--third-color);
-
+    
 }
-header{
+header{ 
     background-color: var(--contrast-light-color);
     height: 100px;
     width: 100%;
@@ -25,7 +25,7 @@ section{
     color: var(--contrast-nigth-color);
 }
 
-nav {
+nav {   
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -33,7 +33,7 @@ nav {
 
 ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;  
 }
 
 li {
@@ -44,7 +44,7 @@ li {
 a {
     text-decoration: none;
     color: var(--contrast-nigth-color);
-}
+}  
 
 
 /*botones*/
@@ -56,7 +56,7 @@ a {
     align-content: stretch;
     border-radius: 10px;
 
-
+ 
     row-gap: 20px;
     gap: 20px;
     font-size: var(--font-size-button);
@@ -81,8 +81,8 @@ a {
 
 
 /*responsive Monitor*/
-@media (min-width: 1024px) and (max-width: 1366px) {
-    /* botones*/
+@media (min-width: 1024px) and (max-width: 1366px) { 
+   /* botones*/
     .Botones-opcion{
         display: flex;
         flex-flow: row wrap;
@@ -90,7 +90,7 @@ a {
         align-items: center;
         align-content: stretch;
         border-radius: 10px;
-
+    
         row-gap: 20px;
         gap: 40px;
         font-size: var(--font-size-button);
@@ -101,6 +101,7 @@ a {
         color: var(--contrast-nigth-color);
         margin: 8% 20% 8%;
         padding: 2em 5.5em 2em 5.5em;
+       
     }
     .button-opcion{
         margin-top: 1rem;
@@ -109,7 +110,9 @@ a {
         border-radius: 10px;
         color: var(--contrast-light-color);
         background-color: var(--third-color);
-        font-size: 20px;
-
+        font-size: 20px;    
+     
     }
+
+
 }
