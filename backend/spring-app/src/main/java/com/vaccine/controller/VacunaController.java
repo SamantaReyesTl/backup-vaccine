@@ -2,6 +2,7 @@ package com.vaccine.controller;
 
 import com.vaccine.model.VacunasModel;
 import com.vaccine.service.VacunaService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -28,26 +29,26 @@ public class VacunaController {
      * es buena practica debido a que no tenemos todo de golpe en un solo archivo.
      */
 
-    @GetMapping("/consultarVacuna")
-    public Object consultarVacuna(@RequestParam("id") Integer id) {
+    @GetMapping("/obtenerVacuna")
+    public ResponseEntity<Object> consultarVacuna(@RequestParam("id") Integer id) {
         VacunaService vacunaService = new VacunaService();
         return vacunaService.consultarVacuna(id);
     }
 
     @PostMapping("/altaVacuna")
-    public Object altaVacuna(@RequestBody VacunasModel vacunaModel) {
+    public ResponseEntity<Object> altaVacuna(@RequestBody VacunasModel vacunaModel) {
         VacunaService vacunaService = new VacunaService();
         return vacunaService.altaVacuna(vacunaModel);
     }
 
     @PutMapping("/actualizarVacuna")
-    public Object actualizarVacuna(@RequestParam("id") Integer id, @RequestBody VacunasModel vacunaModel) {
+    public ResponseEntity<Object> actualizarVacuna(@RequestParam("id") Integer id, @RequestBody VacunasModel vacunaModel) {
         VacunaService vacunaService = new VacunaService();
         return vacunaService.actualizarVacuna(id, vacunaModel);
     }
 
     @DeleteMapping("/bajaVacuna")
-    public Object bajaVacuna(@RequestParam("id") Integer id) {
+    public ResponseEntity<Object> bajaVacuna(@RequestParam("id") Integer id) {
         VacunaService vacunaService = new VacunaService();
         return vacunaService.bajaVacuna(id);
     }

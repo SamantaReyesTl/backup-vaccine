@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class VacunaService {
-    public Object consultarVacuna(Integer id) {
+    public ResponseEntity<Object> consultarVacuna(Integer id) {
         ConexionCreada conexionCreada = new ConexionCreada();
         Connection connection = conexionCreada.getConnection();
 
@@ -37,15 +37,15 @@ public class VacunaService {
                     rs.getInt("siguiente_Esquema")
             );
 
+            conexionCreada.cerrarConexion();
             return ResponseEntity.ok().body(vacuna);
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Error al consultar vacuna "+e);
-        } finally {
             conexionCreada.cerrarConexion();
+            return ResponseEntity.badRequest().body("Error al consultar vacuna "+e);
         }
     }
 
-    public Object altaVacuna(VacunasModel vacunaModel) {
+    public ResponseEntity<Object> altaVacuna(VacunasModel vacunaModel) {
         ConexionCreada conexionCreada = new ConexionCreada();
         Connection connection = conexionCreada.getConnection();
 
@@ -66,15 +66,15 @@ public class VacunaService {
             preparedStatement.setInt(7, vacunaModel.getSiguiente_Esquema());
             preparedStatement.executeUpdate();
 
+            conexionCreada.cerrarConexion();
             return ResponseEntity.ok().body("Vacuna dada de alta correctamente");
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Error al dar de alta vacuna");
-        } finally {
             conexionCreada.cerrarConexion();
+            return ResponseEntity.badRequest().body("Error al dar de alta vacuna");
         }
     }
 
-    public Object actualizarVacuna(Integer id, VacunasModel vacunaModel) {
+    public ResponseEntity<Object> actualizarVacuna(Integer id, VacunasModel vacunaModel) {
         ConexionCreada conexionCreada = new ConexionCreada();
         Connection connection = conexionCreada.getConnection();
 
@@ -97,15 +97,15 @@ public class VacunaService {
             preparedStatement.setInt(8, id);
             preparedStatement.executeUpdate();
 
+            conexionCreada.cerrarConexion();
             return ResponseEntity.ok().body("Vacuna actualizada correctamente");
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Error al actualizar vacuna"+e);
-        } finally {
             conexionCreada.cerrarConexion();
+            return ResponseEntity.badRequest().body("Error al actualizar vacuna"+e);
         }
     }
 
-    public Object bajaVacuna(Integer id) {
+    public ResponseEntity<Object> bajaVacuna(Integer id) {
         ConexionCreada conexionCreada = new ConexionCreada();
         Connection connection = conexionCreada.getConnection();
 
@@ -118,11 +118,11 @@ public class VacunaService {
             preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
 
+            conexionCreada.cerrarConexion();
             return ResponseEntity.ok().body("Vacuna eliminada correctamente");
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Error al eliminar vacuna");
-        } finally {
             conexionCreada.cerrarConexion();
+            return ResponseEntity.badRequest().body("Error al eliminar vacuna");
         }
     }
 }
